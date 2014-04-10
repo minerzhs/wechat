@@ -53,7 +53,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
-    passenger (4.0.40)
+    passenger (4.0.41)
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
@@ -117,7 +117,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
-  passenger (~> 4.0.40)
+  passenger (~> 4.0.41)
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
