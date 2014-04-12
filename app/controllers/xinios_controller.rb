@@ -8,8 +8,21 @@ class XiniosController < ApplicationController
 
   def create
     if params[:xml][:MsgType] == "text"
-      render "echo", :formats => :xml
+      render "reply", :formats => :xml
     end
+  end
+
+  def reply
+    builder = Nokogiri::XML::Builder.new do |xml|
+      xml.xml{
+        xml.ToUserName <![CDATA[params[:xml][:FromUserName]]]>
+        xml.FromUserName <![CDATA[params[:xml][:ToUserName]]]>
+        xml.CreateTime Time.now.to_i
+        xml.MsgType <![CDATA[text]]>
+        xml.Content <![CDATA["This is the reply test"]]>
+      }
+    end
+    puts builder.to_xml
   end
 
   private

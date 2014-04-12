@@ -12,9 +12,6 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-gem 'passenger', '~> 4.0.41'
-gem 'therubyracer'
-
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -34,6 +31,15 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+#Passenger for aliyun deployment
+gem 'passenger', '~> 4.0.41'
+
+#for Javascript Runtime
+gem 'therubyracer'
+
+#To create XML document
+gem 'nokogiri'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
